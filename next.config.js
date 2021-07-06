@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   env: {
-    "BASE_URL" : "https://vercel.com/shoaib-ahamed/travel-blog",
+    "BASE_URL" : "https://travel-blog-nu.vercel.app/",
     "MONGODB_URL" : "mongodb+srv://shoaibahamed:shoaibahamed@cluster0.hkt9w.mongodb.net/e-shop?retryWrites=true&w=majority",
     "ACCESS_TOKEN_SECRET" : "shoaibahamedshafi@gmail.com01672019292",
     "REFRESH_TOKEN_SECRET" : "shoaibahamedshafi@gmail.com0167201929201303082197",
