@@ -1,6 +1,7 @@
-import connectDB from '../../../utils/connectDB'
-import Users from '../../../models/userModel'
+/* eslint-disable import/no-anonymous-default-export */
 import auth from '../../../middleware/auth'
+import Users from '../../../models/userModel'
+import connectDB from '../../../utils/connectDB'
 
 connectDB()
 
