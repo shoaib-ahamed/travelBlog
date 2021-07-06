@@ -22,20 +22,10 @@ const ProductItem = ({product, handleCheck}) => {
         )
     }
 
-    if(!auth.user) return null
-
     return(
         <div className="card" style={{ width: '18rem' }}>
-            {
-                auth.user && auth.user.role === 'admin' &&
-                <input type="checkbox" checked={product.checked}
-                className="position-absolute"
-                style={{height: '20px', width: '20px'}}
-                onChange={() => handleCheck(product._id)} />
-            }
             <img className="card-img-top" src={product.images} alt={product.images} />
             <div className="card-body">
-                <h6>{auth.user.name}</h6>
                 <h5 className="card-title text-capitalize" title={product.title}>
                     {product.title}
                 </h5>
