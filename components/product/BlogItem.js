@@ -9,8 +9,6 @@ const ProductItem = ({product, handleCheck}) => {
     const [ state, dispatch ] = useContext(DataContext)
     const { cart, auth } = state
 
-  
-
     const userLink = () => {
         return(
             <>
