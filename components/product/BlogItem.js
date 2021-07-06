@@ -22,8 +22,6 @@ const ProductItem = ({product, handleCheck}) => {
         )
     }
 
-    if(!auth.user) return null
-
     return(
         <div className="card" style={{ width: '18rem' }}>
             {
