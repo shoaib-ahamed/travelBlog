@@ -1,20 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
-import { useContext, useState } from 'react'
-import { DataContext } from '../../store/GlobalState'
+import { useState } from 'react'
 
-const ProductItem = ({product, handleCheck}) => {
+const BlogsItem = ({blogs}) => {
     const [ checked , setChecked ] = useState(false)
-
-    const [ state, dispatch ] = useContext(DataContext)
-    const { cart, auth } = state
-
-  
-
+    
     const userLink = () => {
         return(
             <>
-                <Link href={`product/${product._id}`}>
+                <Link href={`blogs/${blogs._id}`}>
                     <a className="btn btn-info"
                     style={{marginRight: '5px', flex: 1}}>View</a>
                 </Link>
@@ -24,18 +18,18 @@ const ProductItem = ({product, handleCheck}) => {
 
     return(
         <div className="card" style={{ width: '18rem' }}>
-            <img className="card-img-top" src={product.images} alt={product.images} />
+            <img className="card-img-top" src={blogs.images} alt={blogs.images} />
             <div className="card-body">
-                <h5 className="card-title text-capitalize" title={product.title}>
-                    {product.title}
+                <h5 className="card-title text-capitalize" title={blogs.title}>
+                    {blogs.title}
                 </h5>
 
                 <div className="row justify-content-between mx-0">
                     
                 </div>
 
-                <p className="card-text" title={product.content}>
-                    {product.content}
+                <p className="card-text" title={blogs.content}>
+                    {blogs.content}
                 </p>
 
                 <div onClick={() => setChecked(true)} >
@@ -50,7 +44,6 @@ const ProductItem = ({product, handleCheck}) => {
                 
                     
                 <div className="row justify-content-between mx-0">
-                    {/* {!auth.user || auth.user.role !== "admin" ? userLink() : adminLink()} */}
                     {userLink()}
                 </div>
             </div>
@@ -59,4 +52,4 @@ const ProductItem = ({product, handleCheck}) => {
 }
 
 
-export default ProductItem
+export default BlogsItem
